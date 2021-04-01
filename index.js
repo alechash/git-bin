@@ -6,6 +6,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 import url from 'url';
 
 // routers
@@ -34,6 +35,13 @@ app.set('view engine', 'ejs');
 
 // routes
 app.use('/', router);
+
+mongoose.connect(process.env.MONGO, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+})
 
 // listen on port
 app.listen(port, console.log(`Started on port: http://localhost:${port}`));
