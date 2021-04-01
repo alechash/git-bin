@@ -1,0 +1,31 @@
+/**
+ * Copyright Git Bin Authors 2021 - Present
+ * 
+ * MIT License
+ */
+ 
+@import url('/css/imports/header.css');
+@import url('/css/imports/navbar.css');
+@import url('/css/imports/utility.css');
+
+@font-face {
+    font-family: rocko;
+    src: url(/font/rocko-bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: rocko;
+    src: url(/font/rocko.ttf);
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(44, 44, 44);
+}
+
+#main {
+    margin: 0px 25px;
+}

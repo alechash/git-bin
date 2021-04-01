@@ -1,0 +1,47 @@
+/**
+ * Copyright Git Bin Authors 2021 - Present
+ * 
+ * MIT License
+ */
+
+.h1 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: xx-large;
+}
+
+.h2 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: x-large;
+}
+
+.h3 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: large;
+}
+
+.h4 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: medium;
+}
+
+.h5 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: small;
+}
+
+.h6 {
+    font-family: 'rocko';
+    font-smooth: 15em;
+    font-size: x-small;
+}
+
+.header {
+    border-bottom: 1px rgb(217, 217, 217) solid;
+    margin: 15px 25px;
+    color: rgb(217, 217, 217);
+}

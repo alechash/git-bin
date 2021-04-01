@@ -1,0 +1,72 @@
+/**
+ * Copyright Git Bin Authors 2021 - Present
+ * 
+ * MIT License
+ */
+
+ .new-paste {
+    max-width: calc(100% - 16px);
+    min-width: calc(100% - 16px);
+    height: 60vh;
+    resize: none;
+    margin: 0;
+    padding: 8px;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+.new-paste-input:focus,
+.new-paste-input-select:focus,
+.new-paste:focus {
+    outline: none;
+}
+
+.button {
+    background-color: rgb(56, 56, 56);
+    color: #f5f5f5;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    border-radius: 25px;
+}
+
+.new-paste-input {
+    max-width: calc(100% - 16px);
+    min-width: calc(100% - 16px);
+    margin: 5px 0;
+    padding: 8px;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.new-paste-input-select {
+    -webkit-appearance: none;
+
+    max-width: calc(100%);
+    min-width: calc(100%);
+    margin: 5px 0;
+    padding: 8px;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+label {
+    color: white;
+    font-family: rocko;
+}

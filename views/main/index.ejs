@@ -1,0 +1,27 @@
+<form method="POST" action="/paste/new">
+    <textarea class="new-paste" id="paste" name="paste" required></textarea>
+
+    <input placeholder="File name" class="new-paste-input" id="name" name="name" required>
+
+    <select class="new-paste-input-select" id="publicity" name="publicity" required>
+        <option value="" selected="selected" hidden="hidden">Please set publicity</option>
+        <option value="public">Public</option>
+        <option value="unlisted">Unlisted</option>
+        <option value="private">Private</option>
+    </select>
+
+    <select class="new-paste-input-select" id="syntax" name="syntax" required>
+        <option value="" selected="selected" hidden="hidden">Please set syntax highlighting</option>
+        <option value="text">Raw Text (none)</option>
+        <option value="assembly">Assembly</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="cs">C#</option>
+        <option value="css">CSS</option>
+        <option value="html">HTML</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+    </select>
+
+    <button class="button h3">Paste It</button>
+</form>

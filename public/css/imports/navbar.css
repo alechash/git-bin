@@ -1,0 +1,55 @@
+/**
+ * Copyright Git Bin Authors 2021 - Present
+ * 
+ * MIT License
+ */
+
+ nav {
+    background-color: rgb(35, 35, 35);
+    padding: 10px;
+    color: rgb(255, 245, 225);
+}
+
+.nav-title {
+    font-size: 25px;
+    padding: 6px 16px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    font-family: rocko;
+}
+
+nav ul li a {
+    display: block;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-right {
+    float: right;
+}
+
+.signup-button {
+    background-color: #333333;
+    color: #f5f5f5;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.signup-button:hover {
+    border-radius: 25px;
+}
+
+.footer {
+    margin-top: 15px;
+}
