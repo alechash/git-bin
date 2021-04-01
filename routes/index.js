@@ -13,6 +13,8 @@ var about = {
 
 router.get('/', function (req, res) {
     about.header = 'New Paste'
+    about.title = 'New Paste'
+
     return res.render('base', about)
 })
 
