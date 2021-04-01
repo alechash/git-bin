@@ -1,2 +1,26 @@
-<%= paste %><br><br>
-<%= pasteOwner %>
+<link rel="stylesheet" href="/css/codemirror.css">
+<div class="paste-box-header">
+    <div class="paste-box-header-inner">
+        <%= paste.meta.name %>
+        <span class="language-tag syntax-<%= paste.meta.syntax %>"><%= paste.meta.syntax %></span>
+        <span class="date-tag"><%= pasteDate %></span>
+        <span class="public-tag"><%= paste.meta.publicity %></span>
+        <span class="toggle-tag" id="toggle-view">View Raw</span>
+        <span class="download-tag">Download Raw</span>
+    </div>
+</div>
+<textarea class="paste-box hidden" id="paste-raw" name="paste-raw" aria-disabled="true"
+    disabled><%= paste.paste %></textarea>
+<textarea class="paste-box" id="paste" name="paste" aria-disabled="true" disabled><%= paste.paste %></textarea>
+<script src="/js/paste.js"></script>
+<script src="/js/codemirror.js"></script>
+<script src="/mode/<%= paste.meta.syntax %>/<%= paste.meta.syntax %>.js"></script>
+<script>
+    var editor = CodeMirror.fromTextArea(document.getElementById('paste'), {
+        lineNumbers: true,
+        mode: '<%= paste.meta.syntax %>',
+        matchBrackets: true,
+        readOnly: true,
+        // enableSearchTools: true
+    });
+</script>

@@ -42,10 +42,11 @@ router.get('/b/:id', async function (req, res) {
         'githubId': paste.meta.owner
     })
 
-    about.header = paste.meta.name
-    about.title = paste.meta.name
+    about.header = `paste: ${paste.meta.name}`
+    about.title = `paste: ${paste.meta.name}`
     about.template = 'main/paste'
     about.paste = paste
+    about.pasteDate = funcs.timeDifference(Date.now(), paste.meta.date)
     about.pasteOwner = owner
 
     return res.render('base', about)

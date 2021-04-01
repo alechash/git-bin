@@ -3,7 +3,6 @@
  * 
  * MIT License
  */
-
 .new-paste {
     max-width: calc(100% - 16px);
     min-width: calc(100% - 16px);
@@ -16,6 +15,97 @@
     color: white;
     border-radius: 5px;
     font-size: medium;
+}
+
+.paste-box {
+    max-width: calc(100% - 16px);
+    min-width: calc(100% - 16px);
+    resize: none;
+    margin: 0;
+    padding: 8px;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    color: white;
+    height: 60vh;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-size: medium;
+}
+
+.paste-box-header {
+    max-width: calc(100% - 16px);
+    min-width: calc(100% - 16px);
+    height: 25px;
+    resize: none;
+    margin: 0;
+    padding: 8px;
+    background-color: rgb(35, 35, 35);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: medium;
+    font-family: rocko;
+}
+
+.paste-box-header-inner {
+    height: 25px;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: medium;
+    font-family: rocko;
+}
+
+.language-tag {
+    padding: 5px;
+    margin-left: 10px;
+    color: green;
+    background-color: rgb(56, 56, 56);
+    border-radius: 25px;
+    font-size: small;
+
+}
+
+.date-tag {
+    padding: 5px;
+    margin-left: 10px;
+    color: rgb(122, 88, 255);
+    background-color: rgb(56, 56, 56);
+    border-radius: 25px;
+    font-size: small;
+
+}
+
+.public-tag {
+    padding: 5px;
+    margin-left: 10px;
+    color: rgb(0, 255, 162);
+    background-color: rgb(56, 56, 56);
+    border-radius: 25px;
+    font-size: small;
+
+}
+
+.toggle-tag {
+    padding: 5px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 56);
+    border-radius: 25px;
+    font-size: small;
+
+}
+
+.download-tag {
+    padding: 5px;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 56);
+    border-radius: 25px;
+    font-size: small;
+
 }
 
 .new-paste-input:focus,
@@ -111,4 +201,8 @@ label {
 .def_link {
     appearance: none;
     padding: 0;
+}
+
+.hidden {
+    display: none;
 }

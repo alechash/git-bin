@@ -4,6 +4,7 @@
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
 import logger from 'morgan';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
@@ -32,7 +33,10 @@ const __dirname = path.dirname(__filename);
 if (process.env.ENV == 'dev') {
     app.use(logger(process.env.ENV));
 }
-app.use(express.json());
+app.use(express.json({
+    limit: '10mb',
+    extended: true
+}));
 app.use(express.urlencoded({
     extended: false
 }));

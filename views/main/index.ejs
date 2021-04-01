@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/codemirror.css">
 <form method="POST" action="/paste/new">
     <textarea class="new-paste" id="paste" name="paste" required></textarea>
 
@@ -18,10 +19,22 @@
         <option value="cpp">C++</option>
         <option value="cs">C#</option>
         <option value="css">CSS</option>
-        <option value="html">HTML</option>
+        <option value="htmlmixed">HTML</option>
         <option value="javascript">JavaScript</option>
         <option value="python">Python</option>
     </select>
 
     <button class="button h3" type="submit">Paste It</button>
 </form>
+<script src="/js/codemirror.js"></script>
+<script>
+    /**
+     *  var editor = CodeMirror.fromTextArea(document.getElementById("paste"), {
+     *      lineNumbers: true,
+     *      mode: "text/html",
+     *      matchBrackets: true,
+     *      disabled: false,
+     *      readOnly: false
+     *  });
+     **/
+</script>
