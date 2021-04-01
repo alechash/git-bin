@@ -3,6 +3,17 @@
         <li><a href="/" class="nav-title"><%= name %></a></li>
         <li><a href="/pastes">Public Pastes</a></li>
         <li><a href="/developer">Developer API</a></li>
+        <% if(loggedin != true) { %>
         <li class="nav-right"><a class="signup-button" href="/auth/github">Signup with GitHub</a></li>
+        <% } else { %>
+        <li class="nav-right">
+            <a class="loggedin-button" href="/u/<%= user.githubId %>">
+                <img class=" loggedin-pfp" src="https://github.com/<%= user.github %>.png">
+                <div class="loggedin-button-text">
+                    @<%= user.github %>
+                </div>
+            </a>
+        </li>
+        <% } %>
     </ul>
 </nav>
