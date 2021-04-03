@@ -1,0 +1,60 @@
+<script>
+    function date(id, previous) {
+        var msPerMinute = 60 * 1000;
+        var msPerHour = msPerMinute * 60;
+        var msPerDay = msPerHour * 24;
+        var msPerMonth = msPerDay * 30;
+        var msPerYear = msPerDay * 365;
+
+        previous = new Date(previous)
+        var current = Date.now()
+        var elapsed = current - previous;
+
+        var returnedDate;
+
+        if (elapsed < msPerMinute) {
+            returnedDate = Math.round(elapsed / 1000) + ' seconds ago';
+        } else if (elapsed < msPerHour) {
+            returnedDate = Math.round(elapsed / msPerMinute) + ' minutes ago';
+        } else if (elapsed < msPerDay) {
+            returnedDate = Math.round(elapsed / msPerHour) + ' hours ago';
+        } else if (elapsed < msPerMonth) {
+            returnedDate = 'approximately ' + Math.round(elapsed / msPerDay) + ' days ago';
+        } else if (elapsed < msPerYear) {
+            returnedDate = 'approximately ' + Math.round(elapsed / msPerMonth) + ' months ago';
+        } else {
+            returnedDate = 'approximately ' + Math.round(elapsed / msPerYear) + ' years ago';
+        }
+
+        document.getElementById(id).innerText = returnedDate
+    }
+</script>
+<label for="apikey">API Key (<a href="/developer" class="link">documentation</a>)</label>
+<input value="<%= user.apiKey %>" class="new-paste-input" disabled aria-disabled="true" name="apikey">
+<h1 class="h2 header no-x-margin">Your Pastes</h1>
+<% for(i=0; i < pastes.length; i++) { %>
+<div class="paste-box-header bottom-rounded">
+    <div class="paste-box-header-inner pointer" onclick="window.location = '/b/<%= pastes[i].meta.shortCode %>'">
+        <%= pastes[i].meta.name %>
+        <span class="language-tag syntax-<%= pastes[i].meta.syntax %>"><%= pastes[i].meta.syntax %></span>
+        <span class="public-tag"><%= pastes[i].meta.publicity %></span>
+        <span class="date-tag" id="date-<%= i %>"><%= pastes[i].meta.date %></span>
+        <script>
+            date("date-<%= i %>", "<%= pastes[i].meta.date %>")
+        </script>
+    </div>
+</div><br>
+<% } %>
+<h1 class="h2 header no-x-margin">Your Shorts</h1>
+<% for(i=0; i < shorts.length; i++) { %>
+<div class="paste-box-header bottom-rounded">
+    <div class="paste-box-header-inner pointer" onclick="window.location = '/s/<%= pastes[i].meta.shortCode %>/stats'">
+        <%= shorts[i].meta.name ? shorts[i].meta.name : shorts[i].meta.shortCode %>
+        <span class="public-tag"><%= shorts[i].url %></span>
+        <span class="date-tag" id="shorts-date-<%= i %>"><%= shorts[i].meta.date %></span>
+        <script>
+            date("shorts-date-<%= i %>", "<%= shorts[i].meta.date %>")
+        </script>
+    </div>
+</div><br>
+<% } %>

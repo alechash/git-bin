@@ -13,6 +13,7 @@ import passportFile from './config/passport.js'
 import session from 'express-session';
 import passport from 'passport';
 import MS from 'express-mongoose-store';
+import * as userAgent from 'express-useragent';
 
 // routers
 import router from './routes/index.js';
@@ -54,6 +55,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.set('views', './views');
 app.set('view engine', 'ejs');
+app.use(userAgent.express())
 
 // routes
 app.use('/', router);

@@ -1,0 +1,20 @@
+<label for="url">Long URL</label>
+<input value="<%= short.url %>" class="new-paste-input" disabled aria-disabled="true" name="url">
+<label for="url">Short Code</label>
+<input value="<%= short.meta.shortCode %>" class="new-paste-input" disabled aria-disabled="true" name="url">
+<label for="url">Creation Date</label>
+<input value="<%= shortDate %>" class="new-paste-input" disabled aria-disabled="true" name="url">
+<h1 class="h1 header no-x-margin">Analytics</h1>
+<label for="url">Clicks</label>
+<input value="<%= stats.length %>" class="new-paste-input" disabled aria-disabled="true" name="url">
+<h1 class="h1 header no-x-margin">Each Click in View</h1>
+<% for(i=0; i < stats.length; i++) { %>
+<label for="url">Click <%= i+1 %></label>
+<input value="Browser: <%= stats[i].meta.browser %> V<%= stats[i].meta.version %>" class="new-paste-input" disabled
+    aria-disabled="true" name="url">
+<input value="Operating System: <%= stats[i].meta.os %>" class="new-paste-input" disabled aria-disabled="true"
+    name="url">
+<input value="Platform: <%= stats[i].meta.platform %>" class="new-paste-input" disabled aria-disabled="true" name="url">
+<input value="User Agent: <%= stats[i].meta.userAgent %>" class="new-paste-input" disabled aria-disabled="true"
+    name="url">
+<% } %>

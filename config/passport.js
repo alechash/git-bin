@@ -3,6 +3,7 @@ import passport from 'passport';
 import GitHubStrategy from 'passport-github2';
 import bcrypt from 'bcryptjs';
 import User from '../models/User.js';
+import funcs from './functions.js'
 
 var callback = ''
 
@@ -32,7 +33,8 @@ export default function (passport) {
                     bio: profile._json.bio,
                     github: profile.username,
                     githubId: profile._json.id,
-                    website: profile._json.blog
+                    website: profile._json.blog,
+                    apiKey: funcs.shortCode(50)
                 });
 
                 newUser.save().then(user => {

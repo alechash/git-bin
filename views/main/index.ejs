@@ -26,6 +26,15 @@
 
     <button class="button h3" type="submit">Paste It</button>
 </form>
+<h1 class="h1 header no-x-margin">URL Shortener</h1>
+<form method="POST" action="/shorten/new">
+    <input placeholder="Long URL" class="new-paste-input" id="url" name="url" type="url" required>
+
+    <input placeholder="Name of URL (optional, shows up in statistics)" class="new-paste-input" id="name" name="name"
+        type="text">
+
+    <button class="button h3" type="submit">Shorten It</button>
+</form>
 <script src="/js/codemirror.js"></script>
 <script>
     /**

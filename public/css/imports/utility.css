@@ -206,3 +206,28 @@ label {
 .hidden {
     display: none;
 }
+
+.no-x-margin {
+    margin: 15px 0px !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.bottom-rounded {
+    border-bottom-left-radius: 5px;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+.white {
+    color: #fff;
+}
